@@ -1,0 +1,11 @@
+{%extends 'home/base.html'%}
+{%block content%}
+<div class="container">
+    {% for task in tasks%}
+    <div class="card m-4 px-2 bg-primary text-white">
+        <h1 class="fs-3">{{task.title}}</h1>
+        <p class="fs-5">{{task.description}}</p>
+    </div>
+    {%endfor%}
+</div>
+{%endblock content%}

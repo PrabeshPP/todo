@@ -1,0 +1,18 @@
+{%extends 'home/base.html'%}
+{%block content%}
+<div class="container">
+    
+    <form method="POST" action="{%url 'add'%}">
+        {%csrf_token%}  
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input class="form-control" type="text" name="title"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea name="description" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{%endblock%}
